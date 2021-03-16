@@ -17,36 +17,36 @@ from cowpy import cow
 from userge import Message, userge
 
 
-@userge.on_cmd(
-    r"(?::/)$",
-    about={"header": "Check yourself, hint: `:/`"},
-    name="Kek",
-    trigger="",
-    allow_via_bot=False,
-)
-async def kek_(message: Message):
-    """kek"""
-    kek = ["/", "\\"]
-    for i in range(1, 9):
-        time.sleep(0.3)
-        await message.try_to_edit(":" + kek[i % 2])
+#@userge.on_cmd(
+#    r"(?::/)$",
+#    about={"header": "Check yourself, hint: `:/`"},
+#    name="Kek",
+#    trigger="",
+#    allow_via_bot=False,
+#)
+#async def kek_(message: Message):
+#    """kek"""
+#    kek = ["/", "\\"]
+#    for i in range(1, 9):
+#        time.sleep(0.3)
+#        await message.try_to_edit(":" + kek[i % 2])
 
 
-@userge.on_cmd(
-    r"(?:-_-)$",
-    about={"header": "Check yourself, hint: `-_-`"},
-    name="Lol",
-    trigger="",
-    allow_via_bot=False,
-)
-async def lol_(message: Message):
-    """lol"""
-    lol = "-_ "
-    for i in range(9):
-        if i % 3 == 0:
-            lol = "-_ "
-        lol = lol[:-1] + "_-"
-        await message.try_to_edit(lol, parse_mode="html")
+#@userge.on_cmd(
+#    r"(?:-_-)$",
+#    about={"header": "Check yourself, hint: `-_-`"},
+#    name="Lol",
+#    trigger="",
+#    allow_via_bot=False,
+#)
+#async def lol_(message: Message):
+#    """lol"""
+#    lol = "-_ "
+#    for i in range(9):
+#        if i % 3 == 0:
+#            lol = "-_ "
+#        lol = lol[:-1] + "_-"
+#        await message.try_to_edit(lol, parse_mode="html")
 
 
 @userge.on_cmd(
@@ -79,7 +79,7 @@ async def Oof_(message: Message):
 async def Hmm_(message: Message):
     """Hmm"""
     Hmm = "Hm "
-    for _ in range(4):
+    for _ in range(6):
         Hmm = Hmm[:-1] + "mm"
         await message.try_to_edit(Hmm)
 
