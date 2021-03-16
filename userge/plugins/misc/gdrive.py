@@ -40,7 +40,7 @@ OAUTH_SCOPE = [
 ]
 REDIRECT_URI = "urn:ietf:wg:oauth:2.0:oob"
 G_DRIVE_DIR_MIME_TYPE = "application/vnd.google-apps.folder"
-G_DRIVE_FILE_LINK = "📄 <a href='https://drive.google.com/open?id={}'>{}</a> __({})__"
+G_DRIVE_FILE_LINK = "📄 <a href='https://drive.google.com/file/d/{}'>{}</a> __({})__"
 G_DRIVE_FOLDER_LINK = (
     "📁 <a href='https://drive.google.com/drive/folders/{}'>{}</a> __(folder)__"
 )
@@ -241,11 +241,12 @@ class _GDrive:
         if Config.G_DRIVE_INDEX_LINK:
             link = os.path.join(
                 Config.G_DRIVE_INDEX_LINK.rstrip("/"),
-                quote(self._get_file_path(file_id, file_name)),
+                quote(file_name),
+                #quote(self._get_file_path(file_id, file_name)),
             )
             if mime_type == G_DRIVE_DIR_MIME_TYPE:
                 link += "/"
-            out += f"\n👥 __[Shareable Link]({link})__"
+            out += f"\n🔗 [Index Link]({link}) __[protected]__"
         return out
 
     def _upload_file(self, file_path: str, parent_id: str) -> str:
