@@ -24,11 +24,16 @@ PMPERMIT_MSG = {}
 pmCounter: Dict[int, int] = {}
 allowAllFilter = filters.create(lambda _, __, ___: Config.ALLOW_ALL_PMS)
 noPmMessage = bk_noPmMessage = (
-    "Hello {fname} this is an automated message\n"
-    "Please wait until you get approved to direct message "
-    "And please dont spam until then "
+    #"Hello {fname} this is an automated message\n"
+    #"Please wait until you get approved to direct message "
+    #"And please dont spam until then "
+    "⚠️ **This is an automated message** ⚠️\n\n"
+    "`HeY {fname}!! Me, assiatant of my BOSS, haven't approved you to PM yet! `"
+    "`Till then, please don't spam my Master's PM, you'll get blocked and reported if you do so!\n\n`"
+    "`But you can contact with him via` @sashn9bot `bot.`"
 )
-blocked_message = bk_blocked_message = "**You were automatically blocked**"
+#blocked_message = bk_blocked_message = "**You were automatically blocked**"
+blocked_message = bk_blocked_message = "**HeY!! You were spamming my Master's PM, which I didn't like. 😑 \nYou have been BLOCKED and reported as SPAM, until further notice. 😐**"
 
 
 async def _init() -> None:
@@ -51,7 +56,7 @@ async def _init() -> None:
     about={
         "header": "allows someone to contact",
         "description": "Ones someone is allowed, "
-        "Userge will not interfere or handle such private chats",
+        "Sohan-UX will not interfere or handle such private chats",
         "usage": "{tr}allow [username | userID]\nreply {tr}allow to a message, "
         "do {tr}allow in the private chat",
     },
@@ -90,7 +95,7 @@ async def allow(message: Message):
     about={
         "header": "Activates guarding on inbox",
         "description": "Ones someone is allowed, "
-        "Userge will not interfere or handle such private chats",
+        "Sohan-UX will not interfere or handle such private chats",
         "usage": "{tr}nopm [username | userID]\nreply {tr}nopm to a message, "
         "do {tr}nopm in the private chat",
     },
@@ -162,7 +167,7 @@ async def pmguard(message: Message):
     "setpmmsg",
     about={
         "header": "Sets the reply message",
-        "description": "You can change the default message which userge gives on un-invited PMs",
+        "description": "You can change the default message which Sohan-UX gives on un-invited PMs",
         "flags": {"-r": "reset to default"},
         "options": {
             "{fname}": "add first name",
@@ -199,7 +204,7 @@ async def set_custom_nopm_message(message: Message):
     about={
         "header": "Sets the block message",
         "description": "You can change the default blockPm message "
-        "which userge gives on un-invited PMs",
+        "which Sohan-UX gives on un-invited PMs",
         "flags": {"-r": "reset to default"},
         "options": {
             "{fname}": "add first name",
@@ -295,7 +300,7 @@ async def uninvitedPmHandler(message: Message):
         PMPERMIT_MSG[message.from_user.id] = (
             await message.reply(
                 noPmMessage.format_map(SafeDict(**user_dict))
-                + "\n`- Protected by USERGE-X`"
+                + "\n`- Protected by Sohan-UX`"
             )
         ).message_id
         await asyncio.sleep(1)
