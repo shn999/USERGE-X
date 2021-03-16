@@ -180,12 +180,12 @@ if userge.has_bot:
             start_msg, btns = default_owner_start(from_user)
         else:
             start_msg = f"""
-Hello 👋 {from_user.fname},
-Nice To Meet You !, I'm <b>{bot_.fname}</b> A Bot.
+Hiii 👋 {from_user.fname},
+Nice To Meet You 😊 I'm <b>{bot_.fname}</b> Bot.
 
-        <b><i>Powered by</i> [USERGE-X](https://t.me/x_xtests)
+        <b><i>Powered by</i> [S A SOHAN bot](https://t.me/sashn9bot)
 
-My Master is : {owner_.flname}</b>
+My Master is: {owner_.flname}</b>
 """
             if Config.BOT_FORWARDS:
                 start_msg += "<b>\n📌 NOTE:</b>\nYou can 📨 <b>Send Message</b> here to contact my <b>Master.</b>"
@@ -197,7 +197,7 @@ My Master is : {owner_.flname}</b>
             btns = [
                 [
                     InlineKeyboardButton("👤  CONTACT", url=contact_url),
-                    InlineKeyboardButton("⭐️  REPO", url=Config.UPSTREAM_REPO),
+                    InlineKeyboardButton("⭐️  REPO", url="https://nekobin.com/mufekoxape"),
                 ]
             ]
         try:
@@ -215,7 +215,7 @@ My Master is : {owner_.flname}</b>
     @check_owner
     async def add_to_grp(c_q: CallbackQuery):
         await c_q.answer()
-        msg = "<b>🤖 Add Your Bot to Group</b> \n\n📌 **NOTE:**\n<i>Admin Privilege Required !</i>"
+        msg = "<b>🤖 Add Your Bot to Group</b> \n\n📌 **NOTE:**\n<i>Admin Privilege Required!</i>"
         add_bot = f"http://t.me/{(await get_bot_info())['bot'].uname}?startgroup=start"
         buttons = InlineKeyboardMarkup(
             [
