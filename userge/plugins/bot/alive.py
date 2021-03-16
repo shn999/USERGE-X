@@ -247,7 +247,7 @@ class Bot_Alive:
         buttons = [
             [
                 InlineKeyboardButton(text="🔧  SETTINGS", callback_data="settings_btn"),
-                InlineKeyboardButton(text="⚡  REPO", url="https://nekobin.com/mufekoxape")),
+                InlineKeyboardButton(text="⚡  REPO", url="https://nekobin.com/mufekoxape"),
             ]
         ]
         return InlineKeyboardMarkup(buttons)
