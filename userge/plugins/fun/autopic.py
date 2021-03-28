@@ -117,12 +117,12 @@ async def apic_worker():
                 )
                 current_h += u_height + pad
             tim = datetime.datetime.now(
-                tz=datetime.timezone(datetime.timedelta(minutes=30, hours=5))
+                tz=datetime.timezone(datetime.timedelta(minutes=00, hours=6))
             )
             date_time = (
                 f"DATE: {tim.day}.{tim.month}.{tim.year}\n"
                 f"TIME: {tim.hour}:{tim.minute}:{tim.second}\n"
-                "UTC+5:30"
+                "UTC+6:00"
             )
             d_width, d_height = draw.textsize(date_time, font=s_font)
             draw.multiline_text(
