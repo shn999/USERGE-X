@@ -58,21 +58,23 @@ _CATEGORY = {
 SAVED_SETTINGS = get_collection("CONFIGS")
 REPO_X = InlineQueryResultArticle(
     title="Repo",
-    input_message_content=InputTextMessageContent("**Here's how to setup USERGE-X** "),
-    url="https://github.com/code-rgb/USERGE-X",
+    input_message_content=InputTextMessageContent("**Here's how to setup SohanzUX** "),
+    url="https://telegra.ph/Sohanz-UX-08-15",
     description="Setup Your Own",
-    thumb_url="https://i.imgur.com/1xsOo9o.png",
+    thumb_url="https://telegra.ph/file/86684045e93feb1c9693e.png",
     reply_markup=InlineKeyboardMarkup(
         [
             [
+                #InlineKeyboardButton(
+                #    "🔥 UX Repo", url="https://github.com/shn999/USERGE-X"
+                #    
+                #),
                 InlineKeyboardButton(
-                    "🔥 USERGE-X Repo", url="https://github.com/code-rgb/USERGE-X"
-                ),
-                InlineKeyboardButton(
-                    "🚀 Deploy USERGE-X",
+                    "🚀 Deploy your own UX",
                     url=(
-                        "https://heroku.com/deploy?template="
-                        "https://github.com/code-pms/MyGpack"
+                        "https://telegra.ph/Sohanz-UX-08-15"
+                        #"https://heroku.com/deploy?template="
+                        #"https://github.com/code-pms/MyGpack
                     ),
                 ),
             ]
