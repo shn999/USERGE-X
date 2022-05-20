@@ -28,7 +28,7 @@ noPmMessage = bk_noPmMessage = (
     #"Please wait until you get approved to direct message "
     #"And please dont spam until then "
     "⚠️ **This is an automated message** ⚠️\n\n"
-    "`HeY {fname}!! Me, assiatant of my BOSS, haven't approved you to PM yet! `"
+    "`HeY {fname}!! Me, assiatant of my BOSS, haven't approved you to PM yet!` "
     "`Till then, please don't spam my Master's PM, you'll get blocked and reported if you do so!\n\n`"
     "`But you can contact with him via` @sashn9bot `bot.`"
 )
@@ -300,7 +300,7 @@ async def uninvitedPmHandler(message: Message):
         PMPERMIT_MSG[message.from_user.id] = (
             await message.reply(
                 noPmMessage.format_map(SafeDict(**user_dict))
-                + "\n`- Protected by Sohan-UX`"
+                + "\n\n- __Protected by Sohan-UX__"
             )
         ).message_id
         await asyncio.sleep(1)
