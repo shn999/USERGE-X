@@ -29,7 +29,7 @@ noPmMessage = bk_noPmMessage = (
     #"And please dont spam until then "
     "⚠️ **This is an automated message** ⚠️\n\n"
     "`HeY {fname}!! Me, assiatant of my BOSS, haven't approved you to PM yet!` "
-    "`Till then, please don't spam my Master's PM, you'll get blocked and reported if you do so!\n\n`"
+    "`Till then, please don't spam my Master's PM, you'll get blocked and reported if you do so!`\n\n"
     "`But you can contact with him via` @sashn9bot `bot.`"
 )
 #blocked_message = bk_blocked_message = "**You were automatically blocked**"
